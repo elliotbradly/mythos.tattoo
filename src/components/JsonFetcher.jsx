@@ -19,35 +19,6 @@ export function JsonFetcher({ url }) {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    // Define an async function inside the effect to perform the fetch
-    const fetchData = async () => {
-      try {
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const jsonData = await response.json();
-        setData(jsonData);
-      } catch (e) {
-        setError(e.message);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [url]); // The effect re-runs if the `url` prop changes
-
-  // Render different UI based on the state
-  if (isLoading) {
-    return <p>Loading data from {url}...</p>;
-  }
-
-  if (error) {
-    return <p style={{ color: 'red' }}>Error fetching data: {error}</p>;
-  }
-
   return (
     <div>
       <p>Successfully fetched data from: <code>{url}</code></p>
