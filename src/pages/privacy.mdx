@@ -1,0 +1,24 @@
+---
+title: "Live Data from an API"
+layout: "../../layouts/Layout.astro" 
+---
+
+import { JsonFetcher } from './JsonFetcher.jsx';
+
+# Fetching Live JSON Data
+
+This page demonstrates how to fetch data from a live API endpoint and display it directly within an MDX file. The component below handles the loading state, error handling, and formatting of the JSON response.
+
+We will use the JSONPlaceholder API for this example.
+
+## Fetching a Single Post
+
+Here is the data for post #1:
+
+<JsonFetcher url="https://jsonplaceholder.typicode.com/posts/1" />
+
+## Fetching a List of Users
+
+You can use the same component to fetch a different endpoint, like a list of users.
+
+<JsonFetcher url="https://jsonplaceholder.typicode.com/users" />
