@@ -1,6 +1,8 @@
 
 const Product = () => {
+
   
+  console.log("see me")
 
   return (
     <ul className="grid grid-cols-1 gap-4 py-2 list-disc list-inside md:grid-cols-3">
