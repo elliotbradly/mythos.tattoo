@@ -49,9 +49,9 @@ function Counter() {
 
   }
 
-  useEffect(() => {
-    loadShade()
-  }, []);
+  //useEffect(() => {
+   // loadShade()
+  //}, []);
 
 
   const increment = () => {
