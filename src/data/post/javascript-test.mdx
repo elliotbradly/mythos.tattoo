@@ -12,12 +12,15 @@ metadata:
   canonical: https://astrowind.vercel.app/astrowind-template-in-depth
 ---
 
-import Counter from '~/components/Counter.jsx';
+export function Thing() {
+ 
+ console.log("ss")
 
-I just started my new Astro blog!
+ return <>World</>
+}
 
-Here is my counter component, working in MDX:
-<Counter client:load />
+# Hello <Thing />
 
-
-
+ <script>
+ 
+ </script>
